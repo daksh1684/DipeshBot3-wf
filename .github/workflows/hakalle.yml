@@ -69,7 +69,7 @@ jobs:
         env:
           JAVA_HOME: /usr/oracle/java/graalvm-ce-java17-22.0.0.2
         run: |
-          git clone https://github.com/daksh1684/Bot3 Haka
+          git clone https://github.com/daksh1684/Haka Haka
           cd Haka && ./gradlew shadowJar
           touch hakalle.yaml
           echo "token: ${{ secrets.BOT_TOKEN }}" >> hakalle.yaml
@@ -96,4 +96,4 @@ jobs:
           
       - name: Run the Hakalle
         continue-on-error: true
-        run: sudo /usr/oracle/java/graalvm-ce-java17-22.0.0.2/bin/java -jar BoboBot.jar
+        run: cd Haka && sudo /usr/oracle/java/graalvm-ce-java17-22.0.0.2/bin/java -jar hakalle/build/libs/*.jar
