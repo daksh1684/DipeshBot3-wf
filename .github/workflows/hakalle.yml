@@ -96,4 +96,4 @@ jobs:
           
       - name: Run the Hakalle
         continue-on-error: true
-        run: cd Haka/build/libs && sudo ./BoboBot-1.7.0-all
+        run: sudo /usr/oracle/java/graalvm-ce-java17-22.0.0.2/bin/java -jar BoboBot.jar
