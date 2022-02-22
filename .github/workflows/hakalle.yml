@@ -78,10 +78,10 @@ jobs:
           echo "sfProject: dp014875" >> hakalle.yaml
           echo "sfUsername: dp014875" >> hakalle.yaml
           echo "sfPassword: ${{ secrets.SF_PASS }}" >> hakalle.yaml
-          echo "privateChatId: -1001475427846" >> hakalle.yaml
-          echo "publicChatId: -1001475427846" >> hakalle.yaml
-          echo "channelId: -1001453367842" >> hakalle.yaml
-          echo "channel: dt_tech_updates" >> hakalle.yaml
+          echo "privateChatId: -1001657261845" >> hakalle.yaml
+          echo "publicChatId: -1001657261845" >> hakalle.yaml
+          echo "channelId: -1001616595070" >> hakalle.yaml
+          echo "channel: dpgsi_updates" >> hakalle.yaml
 
       - name: Install OpenJDK 8 for ROM Resigning and setup our tool
         continue-on-error: true
@@ -89,7 +89,7 @@ jobs:
         run: |
           sudo apt install openjdk-8-jdk -y >> /dev/null 2>&1
           cd Haka
-          git clone https://github.com/daksh1674/dpgsis --depth 1 ErfanGSIs
+          git clone https://github.com/daksh1674/dpgsiss --depth 1 ErfanGSIs
           pip3 install wheel setuptools
           pip3 install backports.lzma docopt zstandard bsdiff4 protobuf pycrypto
           sudo pip3 install --upgrade protobuf
