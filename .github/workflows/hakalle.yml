@@ -89,7 +89,7 @@ jobs:
         run: |
           sudo apt install openjdk-8-jdk -y >> /dev/null 2>&1
           cd Haka
-          git clone https://github.com/daksh1674/dpgsiss --depth 1 ErfanGSIs
+          git clone https://github.com/DipeshGSI-private/dpgsi --depth 1 ErfanGSIs
           pip3 install wheel setuptools
           pip3 install backports.lzma docopt zstandard bsdiff4 protobuf pycrypto
           sudo pip3 install --upgrade protobuf
