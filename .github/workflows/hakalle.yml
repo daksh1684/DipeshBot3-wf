@@ -37,7 +37,7 @@ jobs:
           git config --global user.email "dipesh199976@gmail.com"
           git config --global pull.rebase false
           git config --global credential.helper store
-          echo "https://daksh1674:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
+          echo "https://daksh1684:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
 
       - name: Install tools/packages
         continue-on-error: true
@@ -69,19 +69,19 @@ jobs:
         env:
           JAVA_HOME: /usr/oracle/java/graalvm-ce-java17-22.0.0.2
         run: |
-          git clone https://github.com/daksh1684/Haka Haka
+          git clone https://github.com/Hakalle/Haka Haka
           cd Haka && ./gradlew shadowJar
           touch hakalle.yaml
           echo "token: ${{ secrets.BOT_TOKEN }}" >> hakalle.yaml
-          echo "username: dipeshmirror1_bot" >> hakalle.yaml
-          echo "creatorId: 1823032615" >> hakalle.yaml
+          echo "username: reflection_gsibot" >> hakalle.yaml
+          echo "creatorId: 5080501897" >> hakalle.yaml
           echo "sfProject: dp014875" >> hakalle.yaml
           echo "sfUsername: dp014875" >> hakalle.yaml
           echo "sfPassword: ${{ secrets.SF_PASS }}" >> hakalle.yaml
           echo "privateChatId: -1001657261845" >> hakalle.yaml
           echo "publicChatId: -1001657261845" >> hakalle.yaml
           echo "channelId: -1001616595070" >> hakalle.yaml
-          echo "channel: dpgsi_updates" >> hakalle.yaml
+          echo "channel: 1616595070" >> hakalle.yaml
 
       - name: Install OpenJDK 8 for ROM Resigning and setup our tool
         continue-on-error: true
