@@ -69,15 +69,15 @@ jobs:
         env:
           JAVA_HOME: /usr/oracle/java/graalvm-ce-java17-22.0.0.2
         run: |
-          git clone https://github.com/Hakalle/Haka Haka
+          git clone https://github.com/Hakalle/Haka
           cd Haka && ./gradlew shadowJar
           touch hakalle.yaml
           echo "token: ${{ secrets.BOT_TOKEN }}" >> hakalle.yaml
           echo "username: reflection_gsibot" >> hakalle.yaml
           echo "creatorId: 5080501897" >> hakalle.yaml
-          echo "sfProject: dp014875" >> hakalle.yaml
+          echo "sfProject: dpgsi" >> hakalle.yaml
           echo "sfUsername: dp014875" >> hakalle.yaml
-          echo "sfPassword: ${{ secrets.SF_PASS }}" >> hakalle.yaml
+          echo "sfPassword: ${{ secrets.SF_PASSWORD }}" >> hakalle.yaml
           echo "privateChatId: -1001657261845" >> hakalle.yaml
           echo "publicChatId: -1001657261845" >> hakalle.yaml
           echo "channelId: -1001616595070" >> hakalle.yaml
